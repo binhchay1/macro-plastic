@@ -10,6 +10,10 @@
 /wp-content/languages
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
+/wp-content/cache
+/wp-content/wp-rocket-config
+/wp-content/advanced-cache.php
+
 # Configuration
 wp-config.php
 
