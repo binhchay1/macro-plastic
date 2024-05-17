@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: WP Maps
-Plugin URI: https://www.flippercode.com
+Plugin URI: https://weplugins.com/
 Description: A fully customizable WordPress Plugin for Google Maps. Create unlimited Google Maps Shortcodes, assign unlimited locations with custom infowindow messages and add to pages, posts and widgets.
 Author: flippercode
-Author URI: https://www.flippercode.com
-Version: 4.5.7
+Author URI: https://weplugins.com/
+Version: 4.5.9
 Text Domain: wp-google-map-plugin
 Domain Path: /lang
 */
@@ -128,7 +128,7 @@ if ( ! class_exists( 'FC_Google_Maps_Lite' ) ) {
 		}
 		
 		/**
-		 * Eneque scripts at frontend.
+		 * Eneque script at frontend.
 		 */
 		function wpgmp_frontend_scripts() {
 
@@ -232,7 +232,7 @@ if ( ! class_exists( 'FC_Google_Maps_Lite' ) ) {
 
 		}
 		/**
-		 * Display map at the frontend using put_wpgmp shortcode.
+		 * Display google maps at the frontend using put_wpgmp shortcode.
 		 * @param  array  $atts   Map Options.
 		 * @param  string $content Content.
 		 */
@@ -251,7 +251,7 @@ if ( ! class_exists( 'FC_Google_Maps_Lite' ) ) {
 
 		}
 		/**
-		 * Display map at the frontend using display_map shortcode.
+		 * Display google maps at the frontend using display_map shortcode.
 		 * @param  array $atts    Map Options.
 		 */
 		function wpgmp_display_map($atts) {
@@ -790,7 +790,7 @@ if ( ! class_exists( 'FC_Google_Maps_Lite' ) ) {
 			define( 'WPGMP_SLUG', 'wpgmp_view_overview' );
 			
 			if ( ! defined( 'WPGMP_VERSION' ) )
-			define( 'WPGMP_VERSION', '4.5.7' );
+			define( 'WPGMP_VERSION', '4.5.9' );
 			
 			if ( ! defined( 'WPGMP_FOLDER' ) )
 			define( 'WPGMP_FOLDER', basename( dirname( __FILE__ ) ) );

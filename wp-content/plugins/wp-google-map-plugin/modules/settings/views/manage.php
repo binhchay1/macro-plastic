@@ -29,7 +29,7 @@ $form->add_element( 'group', 'wpgmp_general_settings', array(
 	'tutorial_link' => 'https://www.wpmapspro.com/docs/how-to-create-an-api-key/'
 ));
 
-$referrer = '*.'.$_SERVER['HTTP_HOST'].'/*';
+$referrer = home_url();
 $referrer_two = '*'.$_SERVER['HTTP_HOST'].'/*';
 
 $form->add_element(

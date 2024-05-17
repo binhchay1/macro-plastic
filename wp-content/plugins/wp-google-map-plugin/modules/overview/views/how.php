@@ -23,8 +23,8 @@ echo wp_kses_post( $form->show_header() );
                 <ol>
 
                     <li><?php 
-                    $api_key_link = '<a href="javascript:void(0);" class="wpgmp_map_key_missing" >  '.esc_html__( 'Google Map API Key','wp-google-map-plugin').'</a>';
-                    $plugin_setting = '<a href="'.admin_url( 'admin.php?page=wpgmp_manage_settings' ).'"> Settings </a>';
+                    $api_key_link = '<a href="https://console.cloud.google.com/" class="wpgmp_map_key_missing" >  '.esc_html__( 'Google Map API Key','wp-google-map-plugin').'</a>';
+                    $plugin_setting = '<a href="'.admin_url( 'admin.php?page=wpgmp_manage_settings' ).'" target="_blank"> Settings </a>';
                     echo sprintf( esc_html__( 'First create a %s. Then go to %s page and insert your google maps API Key and save.', 'wp-google-map-plugin' ), $api_key_link, $plugin_setting );
 
                     ?>
@@ -86,7 +86,7 @@ echo wp_kses_post( $form->show_header() );
         <p><img src="<?php echo WPGMP_IMAGES; ?>referrer.png"> </p>
         <p><?php
 
-        $support_ticket = '<a target="_blank" href="http://www.flippercode.com/support">'.esc_html__('support ticket','wp-google-map-plugin').'</a>';
+        $support_ticket = '<a target="_blank" href="https://weplugins.com/support/">'.esc_html__('support ticket','wp-google-map-plugin').'</a>';
 
             echo sprintf( esc_html__( "If you need any assistance or if you still see any issue, feel free to create a %s and we'd be happy to help you asap.", 'wp-google-map-plugin' ), $support_ticket);
             echo '<br><br>';    
