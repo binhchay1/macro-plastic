@@ -49,7 +49,6 @@ if (!empty($totalbusiness_post_option['header-background'])) {
 	$id_option = 'z_taxonomy_image' . $cat_id;
 ?>
 	<?php if (get_option($id_option) != '') { ?>
-		<?php var_dump(1); ?>
 		<div class="totalbusiness-page-title-wrapper <?php echo esc_attr($header_style . '-title-wrapper'); ?>" <?php echo 'style="background-image: url(\'' . esc_url(get_option($id_option)) . '\'); "'; ?>>
 			<div class="totalbusiness-page-title-overlay"></div>
 			<div class="totalbusiness-page-title-container container">
