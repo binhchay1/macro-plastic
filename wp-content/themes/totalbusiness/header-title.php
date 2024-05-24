@@ -21,8 +21,10 @@ if (!empty($totalbusiness_post_option['header-background'])) {
 			<h1 class="totalbusiness-page-title"><?php esc_html_e('Home', 'totalbusiness') ?></h1>
 		</div>
 	</div>
+
 <?php } else if (is_page() && (empty($totalbusiness_post_option['show-title']) || $totalbusiness_post_option['show-title'] != 'disable')) { ?>
 	<?php $page_background = ''; ?>
+
 	<div class="totalbusiness-page-title-wrapper <?php echo esc_attr($header_style . '-title-wrapper'); ?>" <?php echo empty($header_background) ? '' : 'style="background-image: url(\'' . esc_url($header_background) . '\'); "'; ?>>
 		<div class="totalbusiness-page-title-overlay"></div>
 		<div class="totalbusiness-page-title-container container">
@@ -41,16 +43,33 @@ if (!empty($totalbusiness_post_option['header-background'])) {
 		$page_title = $theme_option['post-title'];
 		$page_caption = $theme_option['post-caption'];
 	}
+
+	$category_detail = get_the_category(get_the_ID());
+	$cat_id = $category_detail[0]->term_id;
+	$id_option = 'z_taxonomy_image' . $cat_id;
 ?>
-	<div class="totalbusiness-page-title-wrapper <?php echo esc_attr($header_style . '-title-wrapper'); ?>" <?php echo empty($header_background) ? '' : 'style="background-image: url(\'' . esc_url($header_background) . '\'); "'; ?>>
-		<div class="totalbusiness-page-title-overlay"></div>
-		<div class="totalbusiness-page-title-container container">
-			<h3 class="totalbusiness-page-title"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_title)); ?></h3>
-			<?php if (!empty($page_caption)) { ?>
-				<span class="totalbusiness-page-caption"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_caption)); ?></span>
-			<?php } ?>
+	<?php if (get_option($id_option) != '') { ?>
+		<?php var_dump(1); ?>
+		<div class="totalbusiness-page-title-wrapper <?php echo esc_attr($header_style . '-title-wrapper'); ?>" <?php echo 'style="background-image: url(\'' . esc_url(get_option($id_option)) . '\'); "'; ?>>
+			<div class="totalbusiness-page-title-overlay"></div>
+			<div class="totalbusiness-page-title-container container">
+				<h3 class="totalbusiness-page-title"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_title)); ?></h3>
+				<?php if (!empty($page_caption)) { ?>
+					<span class="totalbusiness-page-caption"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_caption)); ?></span>
+				<?php } ?>
+			</div>
 		</div>
-	</div>
+	<?php } else { ?>
+		<div class="totalbusiness-page-title-wrapper <?php echo esc_attr($header_style . '-title-wrapper'); ?>" <?php echo empty($header_background) ? '' : 'style="background-image: url(\'' . esc_url($header_background) . '\'); "'; ?>>
+			<div class="totalbusiness-page-title-overlay"></div>
+			<div class="totalbusiness-page-title-container container">
+				<h3 class="totalbusiness-page-title"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_title)); ?></h3>
+				<?php if (!empty($page_caption)) { ?>
+					<span class="totalbusiness-page-caption"><?php echo totalbusiness_text_filter(totalbusiness_escape_string($page_caption)); ?></span>
+				<?php } ?>
+			</div>
+		</div>
+	<?php } ?>
 <?php } else if (is_single()) { // for custom post type
 
 	$page_title = get_the_title();
