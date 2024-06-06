@@ -23,7 +23,7 @@ echo wp_kses_post( $form->show_header() );
                 <ol>
 
                     <li><?php 
-                    $api_key_link = '<a href="https://console.cloud.google.com/" class="wpgmp_map_key_missing" >  '.esc_html__( 'Google Map API Key','wp-google-map-plugin').'</a>';
+                    $api_key_link = '<a href="https://www.wpmapspro.com/docs/how-to-create-an-api-key/" class="wpgmp_map_key_missing" target="_blank" >  '.esc_html__( 'Google Map API Key','wp-google-map-plugin').'</a>';
                     $plugin_setting = '<a href="'.admin_url( 'admin.php?page=wpgmp_manage_settings' ).'" target="_blank"> Settings </a>';
                     echo sprintf( esc_html__( 'First create a %s. Then go to %s page and insert your google maps API Key and save.', 'wp-google-map-plugin' ), $api_key_link, $plugin_setting );
 

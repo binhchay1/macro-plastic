@@ -110,7 +110,7 @@ class OrderList {
 				// wc_get_order() defaults to the global $post object, so we don't need to pass a parameter.
 				global $post;
 				$order                     = wc_get_order( $post->ID );
-				$is_tiktok_order           = ! ! $order->get_meta( 'tiktok_order' );
+				$is_tiktok_order           = (bool) $order->get_meta( 'tiktok_order' );
 				$tiktok_order_id           = $order->get_meta( 'tiktok_order_id' );
 				$tiktok_fulfillment_type   = $order->get_meta( 'tiktok_fulfillment_type' );
 				$is_tiktok_fulfillment_3pl = $tiktok_fulfillment_type === $pl_3;

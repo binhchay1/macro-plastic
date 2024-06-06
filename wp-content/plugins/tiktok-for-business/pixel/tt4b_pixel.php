@@ -13,6 +13,7 @@ add_action( 'woocommerce_before_single_product_summary', [ 'Tt4b_Pixel_Class', '
 add_action( 'woocommerce_payment_complete', [ 'Tt4b_Pixel_Class', 'inject_purchase_event' ] );
 add_action( 'woocommerce_thankyou', [ 'Tt4b_Pixel_Class', 'inject_purchase_event' ] );
 add_action( 'woocommerce_after_checkout_form', [ 'Tt4b_Pixel_Class', 'inject_initiate_checkout_event' ] );
+add_action( 'woocommerce_blocks_checkout_enqueue_data', [ 'Tt4b_Pixel_Class', 'inject_initiate_checkout_event' ] );
 add_action( 'wp_head', [ 'Tt4b_Pixel_Class', 'print_script' ] );
 add_action( 'init', [ 'Tt4b_Pixel_Class', 'set_ttclid' ] );
 add_action( 'wp_enqueue_scripts', [ 'Tt4b_Pixel_Class', 'add_ajax_snippet' ] );

@@ -3,7 +3,7 @@ Contributors: tiktokforbusiness, woocommerce, automattic
 Tags: tiktok
 Requires at least: 5.7.0
 Tested up to: 6.4
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -191,6 +191,13 @@ Order Cancellations, returns, and refunds can only be managed in [Seller Center.
 Please [open a support ticket](https://woo.com/contact-us/).
 
 == Changelog ==
+2024-06-04 - version 1.2.6
+* Add - additional MAM parameters
+* Add - separate pixel base code partner name for Wordpress users
+* Add - page view event server side
+* Add - configure button on plugin manager screen
+* Fix - AJAX add to cart execution
+
 2024-03-21 - version 1.2.5
 * Fix - compatibility error with WooCommerce blocks
 

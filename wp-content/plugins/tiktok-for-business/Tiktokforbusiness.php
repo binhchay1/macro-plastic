@@ -23,7 +23,7 @@ class Tiktokforbusiness {
 	 *
 	 * @var string[]
 	 */
-	private static $current_tiktok_for_woocommerce_version = '1.2.5';
+	private static $current_tiktok_for_woocommerce_version = '1.2.6';
 
 	/**
 	 * Whether WooCommerce has been loaded.
@@ -81,6 +81,41 @@ class Tiktokforbusiness {
 		if ( did_action( 'woocommerce_loaded' ) > 0 ) {
 			add_action( 'init', [ $this, 'add_onboarding_task' ], 20 );
 		}
+
+		add_filter( 'plugin_action_links_' . plugin_basename( $this->get_plugin_file() ), array( $this, 'plugin_action_links' ) );
+	}
+
+	/**
+	 * Get the plugin file name.
+	 */
+	public function get_plugin_file() {
+		$slug = dirname( plugin_basename( __FILE__ ) );
+		return trailingslashit( $slug ) . $slug . '.php';
+	}
+
+	/**
+	 * Adds plugin action links.
+	 */
+	public function plugin_action_links( $actions ) {
+		$custom_actions = [];
+
+		// settings url(s).
+		$custom_actions['configure'] = $this->get_settings_link();
+
+		// add the links to the front of the actions list.
+		return array_merge( $custom_actions, $actions );
+	}
+
+	/**
+	 * Gets the configuration link to direct to the plugin set-up.
+	 */
+	public function get_settings_link() {
+		$settings_url = get_admin_url() . 'admin.php?page=tiktok';
+		if ( $settings_url ) {
+			return sprintf( '<a href="%s">%s</a>', $settings_url, esc_html__( 'Configure', 'tiktok-for-woocommerce' ) );
+		}
+		// no settings.
+		return '';
 	}
 
 	/**
