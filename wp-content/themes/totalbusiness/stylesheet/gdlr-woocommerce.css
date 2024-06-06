@@ -151,6 +151,7 @@ html .woocommerce .woocommerce-breadcrumb, html .woocommerce-page .woocommerce-b
 	padding-bottom: 20px;
 }
 html .single-product.woocommerce .woocommerce-breadcrumb, html .single-product.woocommerce-page .woocommerce-breadcrumb {
+	font-size: 16px !important;
 	border-bottom: 0;
 	margin-bottom: 3px;
 }
@@ -163,6 +164,7 @@ html .woocommerce .related ul.products li.product, html .woocommerce .related ul
 	margin-bottom: 25px;
 }
 .related.products h2 {
+	font-weight:500 !important;
 	font-size: 24px;
 	font-weight: lighter;
 	margin-top: 50px;

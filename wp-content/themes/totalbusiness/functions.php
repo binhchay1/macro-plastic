@@ -125,3 +125,22 @@ if (!is_admin()) {
 
 // revision
 include_once(get_template_directory() . '/gdlr-revision.php');
+
+/**
+ * Change number of related products output
+ */ 
+function woo_related_products_limit() {
+  global $product;
+	
+	$args['posts_per_page'] = 6;
+	return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
+  function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 3; // 4 related products
+	return $args;
+}
+
+
+
+

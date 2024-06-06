@@ -12,12 +12,13 @@ body, input, textarea, select, .totalbusiness-content-font{ font-family: "Lato";
 .totalbusiness-navigation{ font-family: "Lato"; }
 .totalbusiness-slider-item{ font-family: "Raleway"; }
 body{ font-size: 14px; }
-h1{ font-size: 36px; }
-h2{ font-size: 34px; }
-h3{ font-size: 25px; }
-h4{ font-size: 19px; }
-h5{ font-size: 14px; }
-h6{ font-size: 9px; }
+h1{ font-size: 47px; }
+h2{ font-size: 41px; }
+h3{ font-size: 32px; }
+h4{ font-size: 26px; }
+h5{ font-size: 21px; }
+h6{ font-size: 16px; }
+.totalbusiness-navigation-wrapper .totalbusiness-main-menu > li > a{ font-size: 12px; }
 .top-navigation-wrapper{ background-color: #f3f3f3; }
 .top-navigation-wrapper{ color: #ffffff; }
 .top-navigation-wrapper a{ color: #f2f2f2; }
@@ -121,8 +122,6 @@ table.style-2 tr:nth-child(even){ color: #949494; }
 .totalbusiness-standard-style .totalbusiness-single-blog-tag a{ background-color: #36bddb; }
 .totalbusiness-standard-style .totalbusiness-single-blog-tag a{ color: #ffffff; }
 .totalbusiness-blog-grid, .totalbusiness-blog-widget .post-header{ background-color: #ffffff; }
-.totalbusiness-blog-widget .blog-date-wrapper{ background-color: #eeeeee; }
-.totalbusiness-blog-widget .blog-date-wrapper{ color: #222222; }
 .format-aside .totalbusiness-blog-content{ background-color: #36bddb; }
 .format-aside .totalbusiness-blog-content{ color: #ffffff; }
 .format-quote .totalbusiness-top-quote blockquote{ color: #8d8d8d; }
@@ -186,7 +185,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea{ color
 .footer-wrapper .tagcloud a{ background-color: #36bddb; }
 .footer-wrapper .tagcloud a, .footer-wrapper .tagcloud a:hover{ color: #ffffff; }
 .copyright-wrapper{ background-color: #0f0f0f; }
-.copyright-wrapper{ color: #828282; }
+.copyright-wrapper{ color: #3f3f3f; }
 .footer-wrapper .copyright-wrapper{ border-color: #0f0f0f; }
 html  .woocommerce span.onsale, html  .woocommerce-page span.onsale, html .woocommerce-message,html .woocommerce div.product .woocommerce-tabs ul.tabs li.active, html .woocommerce #content div.product .woocommerce-tabs ul.tabs li.active,html .woocommerce-page div.product .woocommerce-tabs ul.tabs li.active, html .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active {  background: #36bddb; }html .woocommerce .star-rating, html .woocommerce-page .star-rating, html .woocommerce .star-rating:before, html .woocommerce-page .star-rating:before, html .woocommerce div.product span.price, html .woocommerce div.product p.price, html .woocommerce #content div.product span.price, html .woocommerce #content div.product p.price, html .woocommerce-page div.product span.price, html .woocommerce-page div.product p.price, html .woocommerce-page #content div.product span.price, html .woocommerce-page #content div.product p.price {color: #36bddb; }
 html .woocommerce-message  a.button, html .woocommerce-error  a.button, html .woocommerce-info  a.button, html .woocommerce-message, html .woocommerce-error, html .woocommerce-info, html  .woocommerce span.onsale, html  .woocommerce-page span.onsale, html .woocommerce div.product .woocommerce-tabs ul.tabs li.active,html .woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, html .woocommerce-page div.product .woocommerce-tabs ul.tabs li.active, html .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active, html .woocommerce nav.woocommerce-pagination ul li span.current, html .woocommerce-page nav.woocommerce-pagination ul li span.current, html .woocommercenav.woocommerce-pagination ul li a:hover, html .woocommerce-page nav.woocommerce-pagination ul li a:hover{ color: #ffffff; }

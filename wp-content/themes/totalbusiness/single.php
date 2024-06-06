@@ -24,7 +24,40 @@
 				<div class="with-sidebar-content <?php echo esc_attr($totalbusiness_sidebar['center']); ?> columns">
 					<div class="totalbusiness-item totalbusiness-blog-full totalbusiness-item-start-content">
 					<?php while ( have_posts() ){ the_post(); ?>
+			<?php 
+												 function get_the_breadcrumb() {
+                            global $post;
+                            $breadcrumb = '<a href="' . home_url() . '">Home</a>';
+                            
+                            if (is_single()) {
+                                $categories = get_the_category($post->ID);
+                                
+                                if ($categories) {
+                                    $category = $categories[0];
+                                    $parents = get_ancestors($category->term_id, 'category');
+                                    $parents = array_reverse($parents);
+                                    
+                                    foreach ($parents as $parent) {
+                                        $parent_category = get_category($parent);
+                                        $breadcrumb .= ' &raquo; <a href="' . get_category_link($parent_category->term_id) . '">' . $parent_category->name . '</a>';
+                                    }
+                                    
+                                    $breadcrumb .= ' &raquo; <a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
+                                }
+                                
+                                $text =   get_the_title();
+                                $breadcrumb .= ' &raquo; ' .  mb_strimwidth($text, 0, 20, "...");
+                            }
+                            
+                            echo $breadcrumb;
+                        }
+
+// Call the function where you want to display the breadcrumb
+                        get_the_breadcrumb();
+						?>
 					
+						
+						
 						<!-- get the content based on post format -->
 						<?php get_template_part('single/content'); ?>
 						
